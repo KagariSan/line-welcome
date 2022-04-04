@@ -10,4 +10,4 @@ RUN carton install
 FROM builder AS runner
 COPY . /usr/src/line-bot
 WORKDIR /usr/src/line-bot
-CMD [ "carton", "exec", "starman","-p", "8080", "./welcome-bot.psgi" ]
+CMD [ "carton", "exec", "starman","-p", "$PORT", "./welcome-bot.psgi" ]
