@@ -1,0 +1,11 @@
+version: "3.3"  # optional since v1.27.0
+services:
+  web:
+    image: line-welcome-bot:latest
+    ports:
+      - "8080:8080"
+    environment:
+      CHANNEL_ACCESS_TOKEN: ${CHANNEL_ACCESS_TOKEN}
+      CHANNEL_SECRET: ${CHANNEL_SECRET}
+      CALLBACK_URL: ${CALLBACK_URL}
+      MESSAGING_API_ENDPOINT: ${MESSAGING_API_ENDPOINT}
